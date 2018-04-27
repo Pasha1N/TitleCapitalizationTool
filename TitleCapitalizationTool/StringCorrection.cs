@@ -16,8 +16,8 @@ namespace TitleCapitalizationTool.String
 
         public void SetString(string stringForCorrection)
         {
-            this.correctableString = null;
-            this.correctableString = stringForCorrection;
+            correctableString = null;
+            correctableString = stringForCorrection;
         }
 
         public string StringCorrectioN()
