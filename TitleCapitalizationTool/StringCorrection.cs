@@ -1,13 +1,11 @@
-﻿using System;
-
-namespace TitleCapitalizationTool.String
+﻿namespace TitleCapitalizationTool.String
 {
     internal class StringCorrection
     {
         private StringTuning stringTuning = new StringTuning(); 
         private string correctableString;
 
-        public StringCorrection() { }
+        public StringCorrection(){ }
 
         public StringCorrection(string stringForCorrection)
         {
