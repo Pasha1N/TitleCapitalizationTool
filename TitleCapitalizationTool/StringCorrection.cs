@@ -1,4 +1,4 @@
-﻿namespace TitleCapitalizationTool.String
+﻿namespace TitleCapitalizationTool.String 
 {
     internal class StringCorrection
     {
