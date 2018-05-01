@@ -36,8 +36,8 @@ namespace TitleCapitalizationTool
                 else
                 {
                     string stringForCorrection = null;
-                    bool result = true;
-                    while (result)
+                    bool askAgain = true;
+                    while (askAgain)
                     {
                         Console.Write("Enter title to capitalize: ");
                         Console.ForegroundColor = ConsoleColor.Red;
@@ -46,7 +46,7 @@ namespace TitleCapitalizationTool
 
                         if (!string.IsNullOrEmpty(stringForCorrection))
                         {
-                            result = false;
+                            askAgain = false;
                         }
                         else
                         {
