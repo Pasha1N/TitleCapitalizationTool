@@ -26,8 +26,7 @@ namespace TitleCapitalizationTool.String
                     }
                 }
             }
-            stringForCorrection = correctableString.ToString();
-            return stringForCorrection;
+             return correctableString.ToString();
         }
 
         public string PunctuationCorrection(string stringForCorrection)
@@ -85,8 +84,7 @@ namespace TitleCapitalizationTool.String
                     }
                 }
             }
-            stringForCorrection = correctableString.ToString();
-            return stringForCorrection;
+            return correctableString.ToString();
         }
 
         public string RegisterNormalization(string stringForCorrection)
