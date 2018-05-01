@@ -14,7 +14,6 @@
 
         public void SetString(string stringForCorrection)
         {
-            correctableString = null;
             correctableString = stringForCorrection;
         }
 
