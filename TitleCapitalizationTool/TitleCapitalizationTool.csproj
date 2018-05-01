@@ -42,8 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="StringCorrection.cs" />
-    <Compile Include="StringTuning.cs" />
+    <Compile Include="String\StringCorrection.cs" />
+    <Compile Include="String\StringTuning.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
