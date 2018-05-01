@@ -18,7 +18,7 @@
             correctableString = stringForCorrection;
         }
 
-        public string StringCorrectioN()
+        public string Correction()
         {
             correctableString = stringTuning.PunctuationCorrection(correctableString);
             correctableString = stringTuning.RemovingExtraSpaces(correctableString);

@@ -28,7 +28,7 @@ namespace TitleCapitalizationTool
 
                         Console.WriteLine("Capitalized title: ");
                         Console.ForegroundColor = ConsoleColor.Green;
-                        Console.WriteLine( stringCorrection.StringCorrectioN());
+                        Console.WriteLine( stringCorrection.Correction());
                         Console.ResetColor();
                     }
                     shouldWork = false;
@@ -58,7 +58,7 @@ namespace TitleCapitalizationTool
                     
                     Console.Write("Capitalized title: " );
                     Console.ForegroundColor = ConsoleColor.Green;
-                    Console.WriteLine(stringCorrection.StringCorrectioN());
+                    Console.WriteLine(stringCorrection.Correction());
                     Console.ResetColor();
 
                     y = Console.CursorLeft;
