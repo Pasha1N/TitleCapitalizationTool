@@ -137,8 +137,8 @@ namespace TitleCapitalizationTool.String
             }
             stringForCorrection = correctableString.ToString();
 
-            string[] prepositionalArray = new string[] { " A ", " An ", " At ", " And ", " By ", " But ", " For ", " In ", " Nor ", " Of ", " On ", " Or ",
-                                                          " Out ", " To ", " The ", " Up ", " Yet " };
+            string[] prepositionalArray = new string[] { " A", " An", " At", " And", " By", " But", " For", " In", " Nor", " Of", " On", " Or",
+                                                          " Out", " To", " The", " Up", " Yet" };
 
             for (int i = 0; i < prepositionalArray.Length; i++)
             {

@@ -20,9 +20,13 @@
 
         public string StringCorrectioN()
         {
-            correctableString = stringTuning.RemovingExtraSpaces(correctableString);
             correctableString = stringTuning.PunctuationCorrection(correctableString);
+            correctableString = stringTuning.RemovingExtraSpaces(correctableString);
+
             correctableString = stringTuning.RegisterNormalization(correctableString);
+
+
+
             return correctableString;
         }
     }
