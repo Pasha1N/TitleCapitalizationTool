@@ -1,5 +1,4 @@
 ﻿using System;
-
 using TitleCapitalizationTool.String;
 
 namespace TitleCapitalizationTool
