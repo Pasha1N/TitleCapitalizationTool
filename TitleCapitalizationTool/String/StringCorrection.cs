@@ -5,8 +5,9 @@
         private StringTuning stringTuning = new StringTuning(); 
         private string correctableString;
 
-        public StringCorrection(){ }
-
+        public StringCorrection()
+        { }
+        
         public StringCorrection(string stringForCorrection)
         {
             correctableString = stringForCorrection;
