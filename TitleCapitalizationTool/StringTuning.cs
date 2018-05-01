@@ -137,12 +137,12 @@ namespace TitleCapitalizationTool.String
             }
             stringForCorrection = correctableString.ToString();
 
-            string[] prepositionalArray = new string[] { " A", " An", " At", " And", " By", " But", " For", " In", " Nor", " Of", " On", " Or",
+            string[] excuses = new string[] { " A", " An", " At", " And", " By", " But", " For", " In", " Nor", " Of", " On", " Or",
                                                           " Out", " To", " The", " Up", " Yet" };
 
-            for (int i = 0; i < prepositionalArray.Length; i++)
+            for (int i = 0; i < excuses.Length; i++)
             {
-                stringForCorrection = stringForCorrection.Replace(prepositionalArray[i], prepositionalArray[i].ToLower());
+                stringForCorrection = stringForCorrection.Replace(excuses[i], excuses[i].ToLower());
             }
             return stringForCorrection;
         }
