@@ -20,11 +20,16 @@ namespace TitleCapitalizationTool
 
                     for (int i = 0; i < arguments.Length; i++)
                     {
-                        Console.ForegroundColor = ConsoleColor.Green;
                         stringCorrection.SetString(arguments[i]);
-                        Console.WriteLine("Enter title to capitalize: " + arguments[i]);
+
+                        Console.Write("Enter title to capitalize: ");
                         Console.ForegroundColor = ConsoleColor.Red;
-                        Console.WriteLine("Capitalized title: " + stringCorrection.StringCorrectioN());
+                        Console.WriteLine( arguments[i]);
+                        Console.ResetColor();
+
+                        Console.WriteLine("Capitalized title: ");
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.WriteLine( stringCorrection.StringCorrectioN());
                         Console.ResetColor();
                     }
                     shouldWork = false;
@@ -35,9 +40,10 @@ namespace TitleCapitalizationTool
                     bool result = true;
                     while (result)
                     {
-                        Console.ForegroundColor = ConsoleColor.Red;
                         Console.Write("Enter title to capitalize: ");
+                        Console.ForegroundColor = ConsoleColor.Red;
                         stringForCorrection = Console.ReadLine();
+                        Console.ResetColor();
 
                         if (!string.IsNullOrEmpty(stringForCorrection))
                         {
@@ -50,8 +56,11 @@ namespace TitleCapitalizationTool
 
                     }
                     StringCorrection stringCorrection = new StringCorrection(stringForCorrection);
+                    
+                    Console.Write("Capitalized title: " );
                     Console.ForegroundColor = ConsoleColor.Green;
-                    Console.WriteLine("Capitalized title: " + stringCorrection.StringCorrectioN());
+                    Console.WriteLine(stringCorrection.StringCorrectioN());
+                    Console.ResetColor();
 
                     y = Console.CursorLeft;
                     x = Console.CursorTop;
