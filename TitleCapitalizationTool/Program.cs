@@ -30,6 +30,7 @@ namespace TitleCapitalizationTool
                         Console.ForegroundColor = ConsoleColor.Green;
                         Console.WriteLine( stringCorrection.Correction());
                         Console.ResetColor();
+                        Console.WriteLine();
                     }
                     shouldWork = false;
                 }
@@ -60,6 +61,7 @@ namespace TitleCapitalizationTool
                     Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine(stringCorrection.Correction());
                     Console.ResetColor();
+                    Console.WriteLine();
 
                     y = Console.CursorLeft;
                     x = Console.CursorTop;
