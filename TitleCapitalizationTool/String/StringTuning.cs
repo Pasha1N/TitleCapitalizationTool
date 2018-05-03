@@ -135,7 +135,7 @@ namespace TitleCapitalizationTool.String
             }
             stringForCorrection = correctableString.ToString();
 
-            string[] excuses = new string[] { " A", " An", " At", " And", " By", " But", " For", " In", " Nor", " Of", " On", " Or",
+            string[] excuses = new string[] { " A", " An"," And", " At",  " But"," By", " For", " In", " Nor", " Of", " On", " Or",
                                                           " Out", " To", " The", " Up", " Yet" };
 
             for (int i = 0; i < excuses.Length; i++)
