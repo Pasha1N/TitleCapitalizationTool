@@ -6,7 +6,8 @@
         private string correctableString;
 
         public StringCorrection()
-        { }
+        {
+        }
         
         public StringCorrection(string stringForCorrection)
         {
