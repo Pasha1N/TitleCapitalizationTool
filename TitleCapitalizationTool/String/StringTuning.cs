@@ -4,7 +4,7 @@ namespace TitleCapitalizationTool.String
 {
     internal class StringTuning
     {
-        public string RemovingExtraSpaces(string stringForCorrection) 
+        public string RemovingExtraSpaces(string stringForCorrection)
         {
             StringBuilder correctableString = new StringBuilder(stringForCorrection);
 
@@ -26,7 +26,7 @@ namespace TitleCapitalizationTool.String
                     }
                 }
             }
-             return correctableString.ToString();
+            return correctableString.ToString();
         }
 
         public string PunctuationCorrection(string stringForCorrection)
@@ -135,12 +135,12 @@ namespace TitleCapitalizationTool.String
             }
             stringForCorrection = correctableString.ToString();
 
-            string[] excuses = new string[] { " A", " An"," And", " At",  " But"," By", " For", " In", " Nor", " Of", " On", " Or",
+            string[] exceptions = new string[] { " A", " An"," And", " At",  " But"," By", " For", " In", " Nor", " Of", " On", " Or",
                                                           " Out", " To", " The", " Up", " Yet" };
 
-            for (int i = 0; i < excuses.Length; i++)
+            for (int i = 0; i < exceptions.Length; i++)
             {
-                stringForCorrection = stringForCorrection.Replace(excuses[i], excuses[i].ToLower());
+                stringForCorrection = stringForCorrection.Replace(exceptions[i], exceptions[i].ToLower());
             }
             return stringForCorrection;
         }
