@@ -26,7 +26,7 @@ namespace TitleCapitalizationTool
                         Console.WriteLine( arguments[i]);
                         Console.ResetColor();
 
-                        Console.WriteLine("Capitalized title: ");
+                        Console.Write("Capitalized title: ");
                         Console.ForegroundColor = ConsoleColor.Green;
                         Console.WriteLine( stringCorrection.Correction());
                         Console.ResetColor();
