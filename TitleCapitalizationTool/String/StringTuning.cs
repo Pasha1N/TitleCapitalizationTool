@@ -135,7 +135,8 @@ namespace TitleCapitalizationTool.String
             }
             stringForCorrection = correctableString.ToString();
 
-            string[] exceptions = new string[] { " A", " An", " And", " At", " But", " By", " For", " In", " Nor", " Of", " On", " Or", " Out", " To", " The", " Up", " Yet" };
+            // string[] exceptions = new string[] { " A", " An", " And", " At", " But", " By", " For", " In", " Nor", " Of", " On", " Or", " Out", " To", " The", " Up", " Yet" };
+            string[] exceptions = new string[] { " A ", " An ", " And ", " At ", " But ", " By ", " For ", " In ", " Nor ", " Of ", " On ", " Or ", " Out ", " To ", " The ", " Up ", " Yet " };
 
 
             for (int i = 0; i < exceptions.Length; i++)
