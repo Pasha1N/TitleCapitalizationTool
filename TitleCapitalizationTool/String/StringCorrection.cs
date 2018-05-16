@@ -21,10 +21,10 @@
 
         public string Correction()
         {
+            correctableString = stringTuning.PunctuationCorrection(correctableString);
             correctableString = stringTuning.RemovingExtraSpaces(correctableString);
             correctableString = stringTuning.RegisterNormalization(correctableString);
-            correctableString = stringTuning.PunctuationCorrection(correctableString);
-
+           
             return correctableString;
         }
     }

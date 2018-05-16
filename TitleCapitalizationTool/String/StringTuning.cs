@@ -89,11 +89,38 @@ namespace TitleCapitalizationTool.String
 
         public string RegisterNormalization(string stringForCorrection)
         {
-            stringForCorrection = stringForCorrection.ToLower();
             StringBuilder correctableString = new StringBuilder(stringForCorrection);
-            int count = 0;
 
-            for (int i = correctableString.Length - 1; i >= 0; i--)
+            int count = 0;
+            for (int i = 0; i < correctableString.Length; i++)//переводит все символы в нижний регист кроме 'A'
+            {
+                if (correctableString[i] == 'A')
+                {
+                    if (i > 0 && i < correctableString.Length-1)
+                    {
+                        if (char.IsLetter(correctableString[i - 1]) && char.IsLetter(correctableString[i + 1]))
+                        {
+                            correctableString[i] = char.ToLower(correctableString[i]);
+                        }
+
+                        if (char.IsLetter(correctableString[i - 1]))
+                        {
+                            correctableString[i] = char.ToLower(correctableString[i]);
+                        }
+
+                        if (char.IsLetter(correctableString[i + 1]))
+                        {
+                            correctableString[i] = char.ToLower(correctableString[i]);
+                        }
+                    }
+                }
+                else
+                {
+                    correctableString[i] = char.ToLower(correctableString[i]);
+                }
+            }
+
+            for (int i = correctableString.Length - 1; i >= 0; i--)//переводит первые буквы всех слов в верхний регистр
             {
                 if (i > 0)
                 {
@@ -109,23 +136,43 @@ namespace TitleCapitalizationTool.String
                         }
                     }
                 }
-                else
-                {
-                    if (correctableString.Length > 1)
-                    {
-                        if (char.IsLetter(correctableString[i]) && char.IsLetter(correctableString[i + 1]))
-                        {
-                            correctableString[i] = char.ToUpper(correctableString[i]);
-                        }
-                    }
-                }
-
+             
                 if (!char.IsLetter(correctableString[i]))
                 {
                     count = 0;
                 }
             }
-            for (int i = 0; i < correctableString.Length; i++)
+            stringForCorrection = correctableString.ToString();
+
+            string[] exceptions = new string[] { " A", " An", " And", " At", " But", " By", " For", " In", " Nor", " Of", " On", " Or", " Out", " To", " The", " Up", " Yet" };
+
+            for (int i = 0; i < exceptions.Length; i++)
+            {
+                for (int j = 0; j < stringForCorrection.Length; j++)
+                {
+                    int index = stringForCorrection.IndexOf(exceptions[i], j);
+
+                    if (index >= 0)
+                    {
+                        j = 0;
+                        j = index + exceptions[i].Length;
+                        if (j <= stringForCorrection.Length - exceptions[i].Length)
+                        {
+                            if (!char.IsLetter(correctableString[j]))
+                            {
+                                correctableString[index + 1] = char.ToLower(correctableString[index + 1]);
+                            }
+                            j--;
+                        }
+                    }
+                    else
+                    {
+                        break;
+                    }
+                }
+            }
+      
+            for (int i = 0; i < correctableString.Length; i++)//переводит первую букву в верхний регистр
             {
                 if (char.IsLetter(correctableString[i]))
                 {
@@ -133,17 +180,8 @@ namespace TitleCapitalizationTool.String
                     break;
                 }
             }
-            stringForCorrection = correctableString.ToString();
 
-            // string[] exceptions = new string[] { " A", " An", " And", " At", " But", " By", " For", " In", " Nor", " Of", " On", " Or", " Out", " To", " The", " Up", " Yet" };
-            string[] exceptions = new string[] { " A ", " An ", " And ", " At ", " But ", " By ", " For ", " In ", " Nor ", " Of ", " On ", " Or ", " Out ", " To ", " The ", " Up ", " Yet " };
-
-
-            for (int i = 0; i < exceptions.Length; i++)
-            {
-                stringForCorrection = stringForCorrection.Replace(exceptions[i], exceptions[i].ToLower());
-            }
-            return stringForCorrection;
+            return correctableString.ToString();
         }
     }
 }
