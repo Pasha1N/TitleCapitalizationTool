@@ -7,7 +7,7 @@ namespace TitleCapitalizationTool
     {
         static void Main(string[] arguments)
         {
-            int y = Console.CursorLeft; 
+            int y = Console.CursorLeft;
             int x = Console.CursorTop;
 
             bool shouldWork = true;
@@ -23,12 +23,12 @@ namespace TitleCapitalizationTool
 
                         Console.Write("Enter title to capitalize: ");
                         Console.ForegroundColor = ConsoleColor.Red;
-                        Console.WriteLine( arguments[i]);
+                        Console.WriteLine(arguments[i]);
                         Console.ResetColor();
 
                         Console.Write("Capitalized title: ");
                         Console.ForegroundColor = ConsoleColor.Green;
-                        Console.WriteLine( stringCorrection.Correction());
+                        Console.WriteLine(stringCorrection.Correction());
                         Console.ResetColor();
                         Console.WriteLine();
                     }
@@ -44,7 +44,7 @@ namespace TitleCapitalizationTool
                         Console.ForegroundColor = ConsoleColor.Red;
                         stringForCorrection = Console.ReadLine();
                         Console.ResetColor();
-
+     
                         if (!string.IsNullOrEmpty(stringForCorrection))
                         {
                             askAgain = false;
@@ -56,8 +56,8 @@ namespace TitleCapitalizationTool
 
                     }
                     StringCorrection stringCorrection = new StringCorrection(stringForCorrection);
-                    
-                    Console.Write("Capitalized title: " );
+
+                    Console.Write("Capitalized title: ");
                     Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine(stringCorrection.Correction());
                     Console.ResetColor();
