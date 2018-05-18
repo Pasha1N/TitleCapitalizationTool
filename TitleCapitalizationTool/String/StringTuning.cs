@@ -89,37 +89,10 @@ namespace TitleCapitalizationTool.String
 
         public string RegisterNormalization(string stringForCorrection)
         {
+            stringForCorrection = stringForCorrection.ToLower();
             StringBuilder correctableString = new StringBuilder(stringForCorrection);
 
             int count = 0;
-            for (int i = 0; i < correctableString.Length; i++)//переводит все символы в нижний регист кроме 'A'
-            {
-                if (correctableString[i] == 'A')
-                {
-                    if (i > 0 && i < correctableString.Length-1)
-                    {
-                        if (char.IsLetter(correctableString[i - 1]) && char.IsLetter(correctableString[i + 1]))
-                        {
-                            correctableString[i] = char.ToLower(correctableString[i]);
-                        }
-
-                        if (char.IsLetter(correctableString[i - 1]))
-                        {
-                            correctableString[i] = char.ToLower(correctableString[i]);
-                        }
-
-                        if (char.IsLetter(correctableString[i + 1]))
-                        {
-                            correctableString[i] = char.ToLower(correctableString[i]);
-                        }
-                    }
-                }
-                else
-                {
-                    correctableString[i] = char.ToLower(correctableString[i]);
-                }
-            }
-
             for (int i = correctableString.Length - 1; i >= 0; i--)//переводит первые буквы всех слов в верхний регистр
             {
                 if (i > 0)
