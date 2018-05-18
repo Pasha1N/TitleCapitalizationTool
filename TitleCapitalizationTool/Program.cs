@@ -21,7 +21,7 @@ namespace TitleCapitalizationTool
                     {
                         stringCorrection.SetString(arguments[i]);
 
-                        Console.Write("Enter title to capitalize: ");
+                        Console.Write("Original title: ");
                         Console.ForegroundColor = ConsoleColor.Red;
                         Console.WriteLine(arguments[i]);
                         Console.ResetColor();
